@@ -100,12 +100,49 @@ export default defineNuxtConfig({
 ```
  ERROR  Cannot start nuxt:  Cannot read properties of undefined (reading 'length')  
 ```
-[pages:extend does not normalize page paths](https://github.com/nuxt/framework/issues/2822)
+[pages:extend does not normalize page paths](https://github.com/nuxt/framework/issues/2822)  
+[router.extendRoutes support in nuxt.config.js for Nuxt 3](https://github.com/nuxt/framework/issues/2041)
 
-
-2.通过中间件文件
+2. 通过中间件文件
 
 
 3. 呈现错误页面
 [rendering-an-error-page](https://v3.nuxtjs.org/guide/features/error-handling/#rendering-an-error-page)
 
+4. module-extend-pages
+[module-extend-pages](https://v3.nuxtjs.org/examples/advanced/module-extend-pages/)  
+一样会报错
+```ts
+// nuxt.config.ts
+export default defineNuxtConfig({
+    modules: [
+        '~/modules/pages',
+        // '@nuxt/ui'
+    ],
+})
+
+```
+```ts
+// modules/pages/index.js
+import { defineNuxtModule, extendPages } from '@nuxt/kit'
+import { resolve } from 'pathe'
+
+export default defineNuxtModule({
+  setup () {
+    extendPages((pages) => {
+      // Add /test page
+      pages.push({
+        name: 'Test',
+        path: '/test',
+        file: resolve(__dirname, './pages/test.vue')
+      })
+    })
+  }
+})
+
+```
+[buildModules this.nuxt.hook](https://github.com/nuxt/framework/issues/2041#issuecomment-1011775139)
+
+
+## todo
+- eslint

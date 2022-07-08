@@ -5,6 +5,13 @@ import { resolve } from 'path'
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+    // modules: [
+    //     '~/modules/pages',
+    //     // '@nuxt/ui'
+    // ],
+    // buildModules: [
+    //     '~/modules/pages'
+    // ],
     hooks: {
         'pages:extend'(routers) { // extend:pages仅当您有 pages 目录时才有效
             // routers.push({
