@@ -143,6 +143,9 @@ export default defineNuxtModule({
 ```
 [buildModules this.nuxt.hook](https://github.com/nuxt/framework/issues/2041#issuecomment-1011775139)
 
+### eslint
+
+[github discussiong Nuxt 3 linting?](https://github.com/nuxt/framework/discussions/2815)
 
 ## todo
 - eslint
