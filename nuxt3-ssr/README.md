@@ -143,6 +143,27 @@ export default defineNuxtModule({
 ```
 [buildModules this.nuxt.hook](https://github.com/nuxt/framework/issues/2041#issuecomment-1011775139)
 
+### eslint 
+[nuxt3项目中使用eslint](https://blog.csdn.net/qwe502763576/article/details/123867837)
+[nuxt3-eslint-starter github](https://github.com/weicheng2138/nuxt3-eslint-starter)
+
+```
+npx eslint --init
+You can also run this command directly using 'npm init @eslint/config'.
+Need to install the following packages:
+  @eslint/create-config
+Ok to proceed? (y) y
+√ How would you like to use ESLint? · problems
+√ What type of modules does your project use? · esm
+√ Which framework does your project use? · vue
+√ Does your project use TypeScript? · No / Yes
+√ Where does your code run? · browser
+√ What format do you want your config file to be in? · JavaScript
+Local ESLint installation not found.
+
+npm install @nuxtjs/eslint-config-typescript@latest --save-dev         
+
+```
 
 ## todo
 - eslint

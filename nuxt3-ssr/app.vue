@@ -7,7 +7,7 @@
 </template>
 <style lang="scss">
 @import "style/common.scss";
-.app-root{
+.app-root {
   height: 100vh;
 }
 </style>
