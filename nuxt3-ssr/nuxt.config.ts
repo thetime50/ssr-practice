@@ -14,7 +14,7 @@ export default defineNuxtConfig({
   //     '~/modules/pages'
   // ],
   hooks: {
-    "pages:extend" (/* routers */) { // extend:pages仅当您有 pages 目录时才有效
+    "pages:extend" (routers) { // extend:pages仅当您有 pages 目录时才有效、
       // routers.push({
       //     path:'/',
       //     redirect: '/home'
@@ -24,10 +24,21 @@ export default defineNuxtConfig({
       //     path:/.*/, // '*', // 现在必须使用正则匹配 *
       //     file: resolve(__dirname,'./pages/err404.vue')
       // })
-      // console.log('routers', routers)
+      console.log("routers", routers);
     },
   },
   vite: {
     plugins: [eslintPlugin()],
   },
+  // router:{
+  //   // 只有 JSON 可序列化选项是可配置的：
+  //   // https://router.vuejs.org/api/#routeroptions
+  //   options: {
+  //     linkActiveClass:,
+  //     linkExactActiveClass:,
+  //     end:,
+  //     sensitive:,
+  //     strict:,
+  //   }
+  // }
 });

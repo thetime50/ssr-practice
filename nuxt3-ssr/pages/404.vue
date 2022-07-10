@@ -3,9 +3,9 @@
     <h2>
       404.vue
     </h2>
-    <router-link to="/home">
+    <NuxtLink to="/home">
       Go back home
-    </router-link>
+    </NuxtLink>
     <div @click="ctn++">
       {{ ctn }}
     </div>

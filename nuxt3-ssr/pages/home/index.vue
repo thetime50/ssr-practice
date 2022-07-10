@@ -4,9 +4,19 @@
     home
     <ul>
       <li>
-        <router-link to="/hello">
+        <NuxtLink to="/hello">
           hello
-        </router-link>
+        </NuxtLink>
+      </li>
+      <li>
+        <NuxtLink :to="{ name: 'users-group-id', query: { q: 'hello world' }, params: { group:'client',id:'0527'}}">
+          users-group-id
+        </NuxtLink>
+        <button
+          @click="navigateTo({ name: 'users-group-id', query: { q: 'hello navigateTo' }, params: { group:'client',id:'0527'}})"
+        >
+          navigateTo
+        </button>
       </li>
     </ul>
   </div>

@@ -179,3 +179,66 @@ export default defineNuxtModule({
 ---| parent.vue
 ```
 
+**页面元数据**
+```js
+
+definePageMeta({ // 只能在页面组件中使用 在组件中使用没有效果 // 不同层级的元数据 会被合并到一个对象里面
+  key: route => route.fullPath, // 路径更新时刷新页面组件
+  title: "hello-route-meta",
+  // keepalive: true, // 页面组件保持缓存
+  // layout: ,// https://v3.nuxtjs.org/guide/directory-structure/pages/#layout
+  // middleware: , // 中间件
+  // layoutTransition: , // 布局切换动画
+  // pageTransition: , // 页面切换动画
+  // alias: '', // 别名 通过不同路径访问到同一个页面组件
+
+});
+
+```
+
+定义元数据数据结构
+
+**导航**
+<NuxtLint>
+
+**路由选项设置**
+
+在 app/router.option.ts 中设置
+
+
+```ts
+import type { RouterConfig } from '@nuxt/schema'
+
+// https://router.vuejs.org/api/#routeroptions
+export default <RouterConfig>{
+}
+```
+
+nuxt.config.ts 中
+```ts
+import { defineNuxtConfig } from "nuxt";
+
+
+export default defineNuxtConfig({
+
+  router:{
+  //   // 只有 JSON 可序列化选项是可配置的：
+  //   // https://router.vuejs.org/api/#routeroptions
+  //   options: {
+  //     linkActiveClass:,
+  //     linkExactActiveClass:,
+  //     end:,
+  //     sensitive:,
+  //     strict:,
+  //   }
+  }
+})
+
+```
+
+**程序化导航**
+
+使用 navigateTo 跳转
+
+
+
