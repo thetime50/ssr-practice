@@ -149,3 +149,33 @@ export default defineNuxtModule({
 
 ## todo
 - eslint
+
+
+## note
+
+### routing
+
+- [routing](https://v3.nuxtjs.org/guide/features/routing)
+- [directory-structure pages](https://v3.nuxtjs.org/guide/directory-structure/pages/)
+- [directory-structure middleware](https://v3.nuxtjs.org/guide/directory-structure/middleware/)
+
+自动引入pages 目录下的 .vue, .js, .jsx, .ts or .tsx 文件作为页面  
+使用 &lt;NuxtPage&gt; 组件来渲染页面  
+页面组件必须有一个根组件，否则客户端导航时会有渲染问题
+
+
+**动态路由 路由参数**
+- 使用 ~/pages/\[\[slug\]\]/index.vue 或者这 ~/pages/\[\[slug\]\].vue 声明路由参数
+- 使用 \[...slug\].vue 捕获剩余所有目录
+
+**路由嵌套 page-key**
+
+目录结构有点蠢
+
+```
+-| pages/
+---| parent/
+------| child.vue
+---| parent.vue
+```
+

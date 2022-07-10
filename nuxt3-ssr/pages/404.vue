@@ -1,11 +1,11 @@
 <template>
   <div class="component-page-err404 flex-layout justify-center align-center">
-    <div>
-      err404 page
-    </div>
-    <div class="">
+    <h2>
+      404.vue
+    </h2>
+    <router-link to="/home">
       Go back home
-    </div>
+    </router-link>
     <div @click="ctn++">
       {{ ctn }}
     </div>
