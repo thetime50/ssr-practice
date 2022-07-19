@@ -2,6 +2,7 @@
   <div class="component-page-home">
     <!-- 路由页面组件外面必须有一个根元素 -->
     home
+    <h2><a href="https://v3.nuxtjs.org/guide/directory-structure/pages/">directory-structure/pages</a></h2>
     <ul>
       <li>
         <NuxtLink to="/hello">
@@ -66,12 +67,34 @@
         </NuxtLink>
       </li>
       <li>
-        特殊元数据 keepalive key layout middleware layoutTransition和pageTransition alias<NuxtLink to="/users-admin/3">
+        特殊元数据 <NuxtLink to="/users-admin/3">
           /users-admin/3
         </NuxtLink>
+        <ul>
+          <li>keepalive</li>
+          <li>key</li>
+          <li>layout</li>
+          <li>middleware</li>
+          <li>layoutTransition</li>
+          <li>pageTransition</li>
+          <li>alias</li>
+        </ul>
       </li>
       <li>
         限制元数据属性结构
+      </li>
+    </ul>
+    <h2><a href="https://v3.nuxtjs.org/guide/directory-structure/middleware/">directory-structure/middleware</a></h2>
+    <ul>
+      <li>
+        route-redirect.global.ts <NuxtLink to="/">
+          /
+        </NuxtLink>
+      </li>
+      <li>
+        命名路由中间件参数 <NuxtLink to="/named-test">
+          /named-test
+        </NuxtLink>
       </li>
     </ul>
   </div>
@@ -91,5 +114,14 @@ export default {
 <style lang="scss" scoped>
 .component-page-home {
     //
+}
+ul ul ul>li {
+    list-style-type: square;
+}
+ul ul>li {
+    list-style-type: circle;
+}
+ul>li {
+    list-style-type: disc;
 }
 </style>

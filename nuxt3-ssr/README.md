@@ -159,6 +159,8 @@ export default defineNuxtModule({
 - [directory-structure pages](https://v3.nuxtjs.org/guide/directory-structure/pages/)
 - [directory-structure middleware](https://v3.nuxtjs.org/guide/directory-structure/middleware/)
 
+#### pages
+
 自动引入pages 目录下的 .vue, .js, .jsx, .ts or .tsx 文件作为页面  
 使用 &lt;NuxtPage&gt; 组件来渲染页面  
 页面组件必须有一个根组件，否则客户端导航时会有渲染问题
@@ -240,5 +242,15 @@ export default defineNuxtConfig({
 
 使用 navigateTo 跳转
 
+#### middleware
+1. 匿名路由中间件 写在页面中 definePageMeta({middleware}) 配置
+2. 命名路由中间件 放置在middleware/目录中 文件命名使用ebab-case短横线分割  
+    definePageMeta({middleware}) 配置
+3. 全局路由中间件 放置在middleware/目录中 使用.global后缀 每次路由更新运行
+
+- 使用 defineNuxtRouteMiddleware 定义中间件 
+  - 返回 navigateTo 重定向跳转 
+  - 返回 abortNavigation 终止导航报错 
+  - 或者不返回
 
 
