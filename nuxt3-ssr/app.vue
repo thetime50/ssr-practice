@@ -2,7 +2,10 @@
   <div class="app-root">
     <!-- <NuxtWelcome /> -->
     <!-- <router-view ></router-view> -->
-    <NuxtPage />
+    <div>
+      $route.name:{{ $route.name }}
+    </div>
+    <NuxtPage /> <!-- :key="$route.name"  -->
   </div>
 </template>
 <style lang="scss">

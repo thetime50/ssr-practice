@@ -10,6 +10,7 @@
 <script setup>
 /* message */
 // http://localhost:3000/users-admin/3/info
+import * as _ from "lodash";
 const props = defineProps({}); // eslint-disable-line
 
 const emit = defineEmits([]); // eslint-disable-line
