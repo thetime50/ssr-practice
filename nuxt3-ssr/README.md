@@ -345,4 +345,48 @@ export default defineNuxtConfig({
   - 返回 abortNavigation 终止导航报错 
   - 或者不返回
 
+### assets
+- public 目录提供静态文件  
+  &lt;img src="/img/nuxt.svg" /&gt;
+- assets 目录  
+  &lt;img src="~/assets/img/nuxt.svg" /&gt;
+#### html head
+https://v3.nuxtjs.org/guide/features/head-management/
 
+使用useHead() 方法添加head属性
+
+```html
+<script setup>
+useHead({
+  title: 'My App',
+  // or, instead:
+  // titleTemplate: (title) => `My App - ${title}`,
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
+  charset: 'utf-8',
+  meta: [
+    { name: 'description', content: 'My amazing site.' }
+  ],
+  bodyAttrs: {
+    class: 'test'
+  }
+})
+</script>
+```
+
+**title template**
+
+```html
+<script setup>
+useHead({
+  title: "useHead title",
+
+  titleTemplate: "%s - Site Title",
+  // titleTemplate: (titleChunk) => {
+  //   return titleChunk ? `${titleChunk} - Site Title` : "Site Title";
+  // },
+});
+</script>
+```
+
+在模板中使用nuxt 内置组件 &lt;Title&gt;、&lt;Base&gt;、&lt;Script&gt;、&lt;Style&gt;、&lt;Meta&gt;、&lt;Link&gt; &lt;Body&gt;，&lt;Html&gt;&lt;Head&gt;  
+注意首字母要大写 这些组件会插入到HTML 结构对应的地方

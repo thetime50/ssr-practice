@@ -114,6 +114,32 @@
         </NuxtLink>
       </li>
     </ul>
+    <h2><a href="https://v3.nuxtjs.org/guide/features/assets">assets</a></h2>
+    <ul>
+      <li>
+        assets-page <NuxtLink to="/assets-page">
+          /assets-page
+        </NuxtLink>
+      </li>
+    </ul>
+    <h2><a href="https://v3.nuxtjs.org/guide/features/head-management">head-management</a></h2>
+    <ul>
+      <li>
+        use-head <NuxtLink to="/head-page/use-head">
+          /head-page/use-head
+        </NuxtLink>
+      </li>
+      <li>
+        head-comp <NuxtLink to="/head-page/head-comp">
+          /head-page/head-comp
+        </NuxtLink>
+      </li>
+      <li>
+        page-meta <NuxtLink to="/head-page/page-meta">
+          /head-page/page-meta
+        </NuxtLink>
+      </li>
+    </ul>
   </div>
 </template>
 
