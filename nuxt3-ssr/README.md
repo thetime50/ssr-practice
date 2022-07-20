@@ -234,8 +234,16 @@ export default {
 #### pages
 https://v3.nuxtjs.org/guide/directory-structure/pages
 
+见下面
+
 #### layouts
 https://v3.nuxtjs.org/guide/directory-structure/layouts/
+
+- 在目录 layouts 下定义布局组件 可定义default.vue 组件  
+- 在页面中使用&lt;NuxtLayout&gt;&lt;NuxtLayout :name="layout"&gt;引用
+- 可通过元数据修改当前页面的默认布局组件 definePageMeta({ layout: "custom",});
+- 可以修改 route.meta.layout 改变布局组件
+
 
 ### routing
 

@@ -6,8 +6,16 @@
     <ul>
       <li>
         client-only-test
-        <NuxtLink to="/clientOnlyPage">
-          /clientOnlyPage
+        <NuxtLink to="/client-only-page">
+          /client-only-pag
+        </NuxtLink>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        layout-page
+        <NuxtLink to="/layout-page">
+          /layout-page
         </NuxtLink>
       </li>
     </ul>
