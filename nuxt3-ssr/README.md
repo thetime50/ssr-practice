@@ -153,6 +153,90 @@ export default defineNuxtModule({
 
 ## note
 
+### views
+
+#### components
+https://v3.nuxtjs.org/guide/directory-structure/components/
+
+放在 components/ 目录下的组件自动引入，自动添加路径作为组件名用大驼峰命名
+
+**动态组件**  
+使用resolveComponent() 方法获取/引入组件
+```html
+<template>
+  <component :is="clickable ? MyButton : 'div'" />
+</template>
+
+<script setup>
+const MyButton = resolveComponent('MyButton')
+</script>
+```
+
+**动态到入 懒加载组件**  
+在组件名前缀lazy可延迟加载组件
+```html
+    <LazyMountainsList v-if="show" />
+```
+
+**手动导入组件**
+```html
+
+<script setup>
+  import { NuxtLink, LazyMountainsList } from '#components'
+  const show = ref(false)
+</script>
+```
+
+**ClientOnly 组件**
+使用 ClientOnly 组件包裹的组件只在客户端上渲染，需要仅在客户端插件中注册该组件
+
+```html
+<template>
+  <div>
+    <Sidebar />
+    <ClientOnly>
+      <!-- this component will only be rendered on client side -->
+      <Comments />
+      <template #fallback> <!-- 服务端预渲染插槽 -->
+        <!-- this will be rendered on server side -->
+        <p>Loading comments...</p>
+      </template>
+    </ClientOnly>
+  </div>
+</template>
+```
+
+**组件目录注册**
+```js
+// awesome-ui/nuxt.js
+import { defineNuxtModule } from '@nuxt/kit'
+import { fileURLToPath } from 'node:url'
+
+export default defineNuxtModule({
+  hooks: {
+    'components:dirs'(dirs) {
+      // Add ./components dir to the list
+      dirs.push({
+        path: fileURLToPath(new URL('./components', import.meta.url)),
+        prefix: 'awesome' // 匹配前缀
+      })
+    }
+  }
+})
+```
+```js
+// nuxt.config.ts
+export default {
+  modules: ['awesome-ui/nuxt']
+}
+```
+
+#### pages
+https://v3.nuxtjs.org/guide/directory-structure/pages
+
+#### layouts
+https://v3.nuxtjs.org/guide/directory-structure/layouts/
+
 ### routing
 
 - [routing](https://v3.nuxtjs.org/guide/features/routing)

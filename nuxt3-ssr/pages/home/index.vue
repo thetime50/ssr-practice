@@ -2,6 +2,15 @@
   <div class="component-page-home">
     <!-- 路由页面组件外面必须有一个根元素 -->
     home
+    <h2><a href="https://v3.nuxtjs.org/guide/features/views/">guide/features/views/</a></h2>
+    <ul>
+      <li>
+        client-only-test
+        <NuxtLink to="/clientOnlyPage">
+          /clientOnlyPage
+        </NuxtLink>
+      </li>
+    </ul>
     <h2><a href="https://v3.nuxtjs.org/guide/directory-structure/pages/">directory-structure/pages</a></h2>
     <ul>
       <li>
