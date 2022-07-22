@@ -41,4 +41,7 @@ export default defineNuxtConfig({
   //     strict:,
   //   }
   // }
+  ignore: [
+    "pages/**/components/**",
+  ],
 });

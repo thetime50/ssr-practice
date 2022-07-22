@@ -140,6 +140,20 @@
         </NuxtLink>
       </li>
     </ul>
+
+    <h2><a href="https://v3.nuxtjs.org/guide/features/data-fetching">data-fetching</a></h2>
+    <ul>
+      <li>todo</li>
+    </ul>
+
+    <h2><a href="https://v3.nuxtjs.org/guide/features/state-management">state-management</a></h2>
+    <ul>
+      <li>
+        state-management <NuxtLink to="/state-management">
+          /state-management
+        </nuxtlink>
+      </li>
+    </ul>
   </div>
 </template>
 

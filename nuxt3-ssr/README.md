@@ -390,3 +390,19 @@ useHead({
 
 在模板中使用nuxt 内置组件 &lt;Title&gt;、&lt;Base&gt;、&lt;Script&gt;、&lt;Style&gt;、&lt;Meta&gt;、&lt;Link&gt; &lt;Body&gt;，&lt;Html&gt;&lt;Head&gt;  
 注意首字母要大写 这些组件会插入到HTML 结构对应的地方
+
+
+### data-fetching
+https://v3.nuxtjs.org/guide/features/data-fetching
+
+### state-management
+https://v3.nuxtjs.org/guide/features/state-management  
+https://v3.nuxtjs.org/guide/directory-structure/composables/
+
+使用useState实现 SSR 友好的状态管理
+
+useState的数据会被序列化为 JSON，所以重要的是它不包含任何不能被序列化的东西，比如类、函数或者符号。
+
+
+
+
