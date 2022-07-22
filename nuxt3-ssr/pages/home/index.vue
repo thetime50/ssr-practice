@@ -114,7 +114,7 @@
         </NuxtLink>
       </li>
     </ul>
-    <h2><a href="https://v3.nuxtjs.org/guide/features/assets">assets</a></h2>
+    <h2><a href="https://v3.nuxtjs.org/guide/features/assets">features/assets</a></h2>
     <ul>
       <li>
         assets-page <NuxtLink to="/assets-page">
@@ -122,7 +122,7 @@
         </NuxtLink>
       </li>
     </ul>
-    <h2><a href="https://v3.nuxtjs.org/guide/features/head-management">head-management</a></h2>
+    <h2><a href="https://v3.nuxtjs.org/guide/features/head-management">features/head-management</a></h2>
     <ul>
       <li>
         use-head <NuxtLink to="/head-page/use-head">
@@ -141,16 +141,30 @@
       </li>
     </ul>
 
-    <h2><a href="https://v3.nuxtjs.org/guide/features/data-fetching">data-fetching</a></h2>
+    <h2><a href="https://v3.nuxtjs.org/guide/features/data-fetching">features/data-fetching</a></h2>
     <ul>
       <li>todo</li>
     </ul>
 
-    <h2><a href="https://v3.nuxtjs.org/guide/features/state-management">state-management</a></h2>
+    <h2><a href="https://v3.nuxtjs.org/guide/features/state-management">features/state-management</a></h2>
     <ul>
       <li>
         state-management <NuxtLink to="/state-management">
           /state-management
+        </nuxtlink>
+      </li>
+    </ul>
+
+    <h2><a href="https://v3.nuxtjs.org/guide/features/error-handling">features/error-handling</a></h2>
+    <ul>
+      <li>
+        error-captured <NuxtLink to="/error-handling/error-captured">
+          /error-handling/error-captured
+        </nuxtlink>
+      </li>
+      <li>
+        error-page <NuxtLink to="/error-handling/error-page">
+          /error-handling/error-page
         </nuxtlink>
       </li>
     </ul>
@@ -170,7 +184,7 @@ export default {
 
 <style lang="scss" scoped>
 .component-page-home {
-    //
+    padding-bottom: 30px;
 }
 ul ul ul>li {
     list-style-type: square;

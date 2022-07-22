@@ -403,6 +403,33 @@ https://v3.nuxtjs.org/guide/directory-structure/composables/
 
 useState的数据会被序列化为 JSON，所以重要的是它不包含任何不能被序列化的东西，比如类、函数或者符号。
 
+### error-handling
+https://v3.nuxtjs.org/guide/features/error-handling
 
+#### 1. Vue 渲染生命周期中的错误（SSR + SPA）
+1. onErrorCaptured https://vuejs.org/api/composition-api-lifecycle.html#onerrorcaptured
+2. vueApp.config.errorHandler 钩子 它将接收所有 Vue 错误，即使它们已被处理。  
+  - [/plugins/error-handler.ts](./plugins/error-handler.ts)
 
+#### 服务器和客户端启动错误（SSR + SPA）
 
+启动 Nuxt 应用程序时出现任何错误 会触发 app:error  
+包括
+
+- nuxt 插件运行错误
+- app:created和app:beforeMount钩子的错误
+- 安装应用程序（在客户端），尽管您应该使用onErrorCaptured或使用vue:error
+- 处理app:mounted钩子
+
+#### API 或 Nitro 服务器生命周期中的错误
+
+无法为这些错误定义服务器端处理程序，但可以呈现错误页面（请参阅下一节）
+
+#### 呈现错误页面
+- useError() 显示正在处理的全局错误
+- createError() 服务端触发会返回错误页面。应用端触 产生一个错误， fatal可以触发错误页面(但是没有效果)  
+  throw createError({cause, data, message, name, stack, statusCode, statusMessage, fatal})
+- clearError() 清除错误并跳转到安全页面
+
+#### 错误拦截组件
+&lt;NuxtErrorBoundary &gt;
